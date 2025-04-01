@@ -1,20 +1,18 @@
 import os
 import gemini_srt_translator as gst
 
-gst.gemini_api_key = "AIzaSyCmnbIlIIy80WWpWriI4JjyOBZE9pgROdU"
-gst.gemini_api_key2 = "AIzaSyDtgkujjhMRYddTd9_yyt5uLiXkeGguOpg" #AIzaSyBVCiozEH0l_Y2oYIIBMSCl-RL-8pYHUnM
+gst.gemini_api_key = "YOUR_GEMINI_API_KEY" #your gemini api key
+gst.gemini_api_key2 = "YOUR_GEMINI_API_KEY" #your other gemini api key/spare key
 gst.target_language = "English"
-#gst.input_file = "NEW/NEW NEW DEUN DEUN.srt"
-#gst.output_file = "DONE/NEW NEW DEUN DEUN (DONE).srt"
 gst.start_line = 1
-gst.description = "Youtube video of Korean talk show"
+gst.description = "Youtube video of Korean talk show" #prompt for them to do the translation with eg.: there are 3 people in this video, speaker1: name, speaker2: name, etc ...
 gst.model_name = "gemini-2.0-flash" # gemini-2.0-flash # gemini-2.0-flash-lite # gemini-1.5-pro # gemini-2.0-flash-exp # gemini-2.0-flash-thinking-exp-01-21
-gst.batch_size = 30
-gst.free_quota = True
-gst.skip_upgrade = True
+gst.batch_size = 30 #default, bigger the number faster the translation (not recommended)
+gst.free_quota = False #Skip version upgrade check (default: False).
+gst.skip_upgrade = True #Use colors in the console output (default: True).
 
-input_directory = "NEW"
-output_directory = "DONE"
+input_directory = "original_file" #your folder of original language files
+output_directory = "translated_file" #your folder of translated files
 
 # --- End Configuration ---
 
